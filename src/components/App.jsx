@@ -1,12 +1,14 @@
-// Компонент
+// Компоненти
 
 import Profile from './Profile/Profile';
 import StatisticsList from './Statistics/StatisticsList';
+import FriendList from './FriendList/FriendList';
 
-// Пропси
+// jsx
 
 import userInfo from './Profile/user';
 import data from './Statistics/data';
+import friends from './FriendList/friends';
 
 export const App = () => {
   return (
@@ -20,6 +22,7 @@ export const App = () => {
       />
       <StatisticsList title="Upload stats" stats={data} />
       {/* <StatisticsList stats={data} /> */}
+      <FriendList friendsList={friends} />
     </div>
   );
 };
