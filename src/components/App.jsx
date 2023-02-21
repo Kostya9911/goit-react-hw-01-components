@@ -1,16 +1,20 @@
+import Profile from './Profile';
+import userInfo from './user';
+
+// console.log(userInfo);
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Profile
+        username={userInfo.username}
+        avatar={userInfo.avatar}
+        tag={userInfo.tag}
+        location={userInfo.location}
+        followers={userInfo.stats.followers}
+        views={userInfo.stats.views}
+        likes={userInfo.stats.likes}
+      />
     </div>
   );
 };
