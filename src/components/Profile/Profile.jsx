@@ -1,8 +1,10 @@
-import css from './css/Profile.module.css';
+import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
 export default function Profile(props) {
   // console.log(props);
-  const { username, tag, location, avatar, followers, views, likes } = props;
+  const { username, tag, location, avatar, stats } = props;
+  const { followers, views, likes } = stats;
   //
   return (
     <div key={username} className={css.profile}>
@@ -35,3 +37,13 @@ export default function Profile(props) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
+};

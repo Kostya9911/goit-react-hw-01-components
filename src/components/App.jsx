@@ -1,7 +1,12 @@
-import Profile from './Profile';
-import userInfo from './user';
+// Компонент
 
-// console.log(userInfo);
+import Profile from './Profile/Profile';
+import StatisticsList from './Statistics/StatisticsList';
+
+// Пропси
+
+import userInfo from './Profile/user';
+import data from './Statistics/data';
 
 export const App = () => {
   return (
@@ -11,10 +16,10 @@ export const App = () => {
         avatar={userInfo.avatar}
         tag={userInfo.tag}
         location={userInfo.location}
-        followers={userInfo.stats.followers}
-        views={userInfo.stats.views}
-        likes={userInfo.stats.likes}
+        stats={userInfo.stats}
       />
+      <StatisticsList title="Upload stats" stats={data} />
+      {/* <StatisticsList stats={data} /> */}
     </div>
   );
 };
