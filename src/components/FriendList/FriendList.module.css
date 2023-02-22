@@ -13,18 +13,14 @@
 }
 .status {
   display: flex;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   margin-right: 15px;
   align-items: center;
   border-radius: 20px;
-  /* justify-content: center; */
-  /* text-align: center; */
 }
 .avatar {
-  margin-right: 20px;
-}
-.name {
+  margin-right: 10px;
 }
 
 .isOnline {
